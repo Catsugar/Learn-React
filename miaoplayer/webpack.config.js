@@ -10,7 +10,20 @@ module.exports = {
       path: path.join(__dirname, '/dist/'),// 输出文件的保存路径  
       filename: 'bundle.js' // 输出文件的名称  
   },
-    module: {
+  plugins: [
+      new HtmlWebpackPlugin({
+          template: './app/index.html',
+          inject: 'body',
+          filename: './index.html'
+      }),
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin(),
+      new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('development')
+      })
+  ],
+  module: {
       loaders: [
         {
           test: /\.js$/,
