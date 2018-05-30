@@ -1,14 +1,13 @@
 //var react=require('react');
-import React from react;
+import React from 'react';
+//import './index.less';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Hello from './components/hello';
-//console.log(react.version);
 render(
 	<AppContainer>
-       </Hello>
+       <Hello/>
 	</AppContainer>,
-	
 	document.getElementById('root')
 );
 if (module.hot){
@@ -16,8 +15,9 @@ if (module.hot){
 		const NewHello = require('./components/hello').default;
         render(
           <AppContainer>
-            </Hello>
+            <NewHello/>
 	      </AppContainer>,
+	      document.getElementById('root')
         );
 	});
 }
