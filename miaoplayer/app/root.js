@@ -14,7 +14,7 @@ let Root=createClass({
 		$('#player').jPlayer({
 			ready:function(){
 			  $(this).jPlayer('setMedia',{
-			  	mp3:''
+			  	mp3:'http://data.5sing.kgimg.com/G124/M01/0E/01/HIcBAFsgfY2AZeRKAJ_jQDYCFtQ186.mp3'
 			  }).jPlayer('play');	
 			},
 			supplied: 'mp3',
@@ -23,9 +23,9 @@ let Root=createClass({
 		$('#player').bind($.jPlayer.event.timeupdate,(e)=>{
            this.setState({
            	  progress: Math.round(e.jPlayer.status.currentTime)
-           })
+           });
 		});
-	}
+	},
 	render() {
 	  return(
 	  	<div>
