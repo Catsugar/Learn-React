@@ -1,7 +1,16 @@
+.App {
+  margin: 0;
+  padding: 0;}
 
 .App-header {
   text-align: center;
   background-color: #222;
+  padding: 20px;
+  color: white;
+}
+.try {
+  background-color: #c00;
+  font: bold 14px "微软雅黑";
   padding: 20px;
   color: white;
 }

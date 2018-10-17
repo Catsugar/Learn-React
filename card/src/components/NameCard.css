@@ -1,7 +1,8 @@
 .card{
 	width:330px;
 	height:200px;
-	margin:10px auto;
+	margin:20px;
+	display:inline-block;
 	font:bold 14px "微软雅黑";
 	color: #333;
 	border:1px #666 solid;

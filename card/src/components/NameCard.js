@@ -5,7 +5,7 @@ class NameCard extends React.Component{
 	render(){
 		const {name,job,number,ishuman,tags}=this.props
 		return (
-			<div class="card">
+			<div className="card">
               <h1>{name}</h1>
               <ul>
                 <li>职位：{job}</li>
