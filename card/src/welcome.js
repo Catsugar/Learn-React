@@ -11,10 +11,11 @@ class Welcome extends React.Component{
 			<div className="App">
                 <div className="App-header">
 	                <h2>惊魂一瞥，乱我心曲</h2>
+	                <DigitalClock />
                 </div>
                 <NameCard name={"赵云澜"} job={"特调处处长"} number={123456789} ishuman={true} tags={["自以为攻","流氓","颜控"]}/>
                 <NameCard name={"沈巍"} job={"龙城大学教授"} number={123456789} ishuman={false} tags={["惊鸿一瞥","美人攻","偏执","心头血"]}/>
-                <DigitalClock/>
+                <NameCard name={"祝红"} job={"御姐"} number={123456789} ishuman={false} tags={["妈的死gay","御姐","蛇"]}/>
                 <div className="try">
 	              	{4+3}{[1,2,3]}{<p>你是笨蛋吗？</p>}
 		            {isLogin? <p>你已经登录了呀！</p>:<p>你还没有登录呢？</p>}

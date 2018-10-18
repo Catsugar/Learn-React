@@ -6,16 +6,24 @@ class DigitalClock extends React.Component{
 		this.state={
 			date:new Date()
 		}
-	    //this.addLikes=this.addLikes.bind(this);
 	}
-	addLikes(){
-		this.setState({
-		})
+	componentDidMount(){
+		this.timer=setInterval(()=>{
+          this.setState({
+          	date:new Date()
+          })
+		},1000)
+	}
+	componentDidUpdate(currentState,state){
+		//console.log(currentState);
+	}	
+	componentWillUnmount(){
+		clearInterval(this.timer)
 	}
 	render(){
 		return (
 		  <div className="clock">
-             <h1>{this.state.date.tolocaleTimeString()}</h1>
+             <h1>{this.state.date.toLocaleTimeString()}</h1>
 		  </div>
 
 		)
