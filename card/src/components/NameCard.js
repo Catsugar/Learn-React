@@ -12,7 +12,7 @@ class NameCard extends React.Component{
                 <li>电话：{number}</li>
                 <li>物种：{ishuman ? '海星人' : '地星人'}</li>
               </ul>
-              <div>好友印象：{tags.map(item =>
+              <div className="tags">好友印象：{tags.map(item =>
 	                      <span>{item}</span>
 		                )}
 		      </div>
