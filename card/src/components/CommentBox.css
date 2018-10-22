@@ -1,3 +1,10 @@
+.commentbox {
+  padding: 20px;
+  text-align: left;
+  font: bold 16px "微软雅黑";
+  background-color:#F60;
+  width: 300px;
+}
 
 .control{
 	width: 300px;
@@ -14,4 +21,8 @@
 	border-radius:5px;
 	margin-left:240px;
 	
+}
+.number{
+   font: bold 13px "微软雅黑";
+   
 }
