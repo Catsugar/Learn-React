@@ -4,6 +4,20 @@ import NameCard from './components/NameCard';
 import DigitalClock from './components/DigitalClock';
 import CommentList from './components/CommentList';
 import CommentBox from './components/CommentBox';
+import ThemeContext from './ThemeContext';
+import ThemeBar from './components/ThemeBar';
+const themes={
+	light:{
+		classNames:"red",
+		bgColor:'#eee',
+		color:"#000"
+	},	
+	dark:{
+		classNames:"black",
+		bgColor:'#222',
+		color:"#fff"
+	},
+}
 class Welcome extends React.Component{
 	constructor(props){
 		super(props)
@@ -23,9 +37,13 @@ class Welcome extends React.Component{
 		const isLogin=true;
 		const test=<h1>你到底是啥呀？</h1>
 		return (
+		  <ThemeContext.Provider value={themes.light}>
 			<div className="App">
                 <div className="App-header">
 	                <h2>惊魂一瞥，乱我心曲</h2>
+	                <a href="#theme-switcher" className="red">浅色主题</a>
+	                <a href="#theme-switcher" className="black">深色主题</a>
+	                <ThemeBar/>
 	                <DigitalClock />
 	                <CommentBox commentLength={comments.length} onAddComment={this.addComment}/>
 	                <CommentList  comments={comments} />
@@ -44,6 +62,7 @@ class Welcome extends React.Component{
 		            </ul>
 		        </div>
             </div>
+          </ThemeContext.Provider>
 		);
 	}
 }
