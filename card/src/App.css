@@ -14,5 +14,21 @@
   padding: 20px;
   color: white;
 }
+.red,.blue{
+  font: bold 14px "微软雅黑";
+  
+  padding:5px 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+.red{
+  background-color: #FCC;
+  color: #000;}
+.blue{
+  background-color: #005680;
+  color: white;}
+
 
 

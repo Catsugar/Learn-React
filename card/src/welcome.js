@@ -8,27 +8,34 @@ import ThemeContext from './ThemeContext';
 import ThemeBar from './components/ThemeBar';
 const themes={
 	light:{
-		classNames:"red",
-		bgColor:'#eee',
+		classnames:"red",
+		bgColor:'#F03',
 		color:"#000"
 	},	
 	dark:{
-		classNames:"black",
-		bgColor:'#222',
+		classnames:"blue",
+		bgColor:'#69F',
 		color:"#fff"
 	},
 }
 class Welcome extends React.Component{
 	constructor(props){
 		super(props)
-		this.state={
+		this.state = {
+			theme: 'light',
 			comments: ["初见昆仑君，惊鸿一瞥，乱我心曲","跨越时间，你在原地","我始终在原地，等一个消息"]
 		}
 		this.addComment=this.addComment.bind(this)
+		this.changeTheme=this.changeTheme.bind(this)
 	}
 	addComment(comment){
       this.setState({
       	comments: [...this.state.comments,comment]
+      })
+	}
+	changeTheme(theme){
+      this.setState({
+      	theme,
       })
 	}	
 	render(){
@@ -37,12 +44,12 @@ class Welcome extends React.Component{
 		const isLogin=true;
 		const test=<h1>你到底是啥呀？</h1>
 		return (
-		  <ThemeContext.Provider value={themes.light}>
+		  <ThemeContext.Provider value={themes[this.state.theme]}>
 			<div className="App">
                 <div className="App-header">
 	                <h2>惊魂一瞥，乱我心曲</h2>
-	                <a href="#theme-switcher" className="red">浅色主题</a>
-	                <a href="#theme-switcher" className="black">深色主题</a>
+	                <a href="#theme-switcher" className="red" onClick={() => {this.changeTheme('light')}}>浅色主题</a>
+	                <a href="#theme-switcher" className="blue" onClick={() => {this.changeTheme('dark')}}>深色主题</a>
 	                <ThemeBar/>
 	                <DigitalClock />
 	                <CommentBox commentLength={comments.length} onAddComment={this.addComment}/>
