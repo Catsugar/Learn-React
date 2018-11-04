@@ -6,6 +6,7 @@ import CommentList from './components/CommentList';
 import CommentBox from './components/CommentBox';
 import ThemeContext from './ThemeContext';
 import ThemeBar from './components/ThemeBar';
+import TodoList from './components/TodoList';
 const themes={
 	light:{
 		classnames:"red",
@@ -52,12 +53,20 @@ class Welcome extends React.Component{
 	                <a href="#theme-switcher" className="blue" onClick={() => {this.changeTheme('dark')}}>深色主题</a>
 	                <ThemeBar/>
 	                <DigitalClock />
-	                <CommentBox commentLength={comments.length} onAddComment={this.addComment}/>
-	                <CommentList  comments={comments} />
+	                <div className="section">
+		                <div className="left">
+			                <CommentBox commentLength={comments.length} onAddComment={this.addComment}/>
+			                <CommentList  comments={comments} />
+			            </div>
+			            <div className="right">
+		                    <TodoList />
+		                </div>
+	                </div>
                 </div>
                 <NameCard name={"赵云澜"} job={"特调处处长"} number={123456789} ishuman={true} tags={["自以为攻","流氓","颜控"]}/>
                 <NameCard name={"沈巍"} job={"龙城大学教授"} number={123456789} ishuman={false} tags={["惊鸿一瞥","美人攻","偏执","心头血"]}/>
                 <NameCard name={"祝红"} job={"御姐"} number={123456789} ishuman={false} tags={["妈的死gay","御姐","蛇"]}/>
+                <NameCard name={"郭长城"} job={"小锅巴"} number={123456789} ishuman={false} tags={["胆小啊","灯芯","没事烧烧"]}/>
                 <div className="try">
 	              	{4+3}{[1,2,3]}{<p>你是笨蛋吗？</p>}
 		            {isLogin? <p>你已经登录了呀！</p>:<p>你还没有登录呢？</p>}
