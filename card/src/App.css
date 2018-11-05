@@ -16,7 +16,6 @@
 }
 .red,.blue{
   font: bold 14px "微软雅黑";
-  
   padding:5px 10px;
   margin: 10px;
   text-decoration: none;
@@ -36,11 +35,10 @@
 .left{
   float: left;
   width: 340px;
-  background-color: #666;
 }
 .right{
   float: right;
   width: 340px;
-  background-color: #666;
+  background-color:#66C;
 }
 

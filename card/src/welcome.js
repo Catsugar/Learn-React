@@ -58,7 +58,7 @@ class Welcome extends React.Component{
 			                <CommentBox commentLength={comments.length} onAddComment={this.addComment}/>
 			                <CommentList  comments={comments} />
 			            </div>
-			            <div className="right">
+			            <div className="left">
 		                    <TodoList />
 		                </div>
 	                </div>

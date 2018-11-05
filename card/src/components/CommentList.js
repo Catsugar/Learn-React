@@ -9,7 +9,6 @@ const CommentList =({ comments }) =>{
 		      {comments.map((item,index) =>
 	                      <li key={index}>{item}</li>
 		                )}
-
 		    </ul>	    
 		</div>
 	)
