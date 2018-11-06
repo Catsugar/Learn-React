@@ -12,8 +12,8 @@ class NameCard extends React.Component{
                 <li>电话：{number}</li>
                 <li>物种：{ishuman ? '海星人' : '地星人'}</li>
               </ul>
-              <div className="tags">好友印象：{tags.map(item =>
-	                      <span>{item}</span>
+              <div className="tags">好友印象：{tags.map((item,index) =>
+	                      <span key={index}>{item}</span>
 		                )}
 		      </div>
 		      <LikeButton/>

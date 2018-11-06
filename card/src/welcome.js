@@ -58,7 +58,7 @@ class Welcome extends React.Component{
 			                <CommentBox commentLength={comments.length} onAddComment={this.addComment}/>
 			                <CommentList  comments={comments} />
 			            </div>
-			            <div className="left">
+			            <div className="right">
 		                    <TodoList />
 		                </div>
 	                </div>
@@ -72,8 +72,8 @@ class Welcome extends React.Component{
 		            {isLogin? <p>你已经登录了呀！</p>:<p>你还没有登录呢？</p>}
 		            {test}
 		            <ul>
-		                {todoList.map(item =>
-	                      <li>{item}</li>
+		                {todoList.map((item,index) =>
+	                      <li key={index}>{item}</li>
 		                )}
 		            </ul>
 		        </div>

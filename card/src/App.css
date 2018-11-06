@@ -29,7 +29,8 @@
   background-color: #005680;
   color: white;}
 .section{
-  height: 400px;
+  height: auto;
+  min-height:400px;
   width: 100%;
 }
 .left{
@@ -40,5 +41,6 @@
   float: right;
   width: 340px;
   background-color:#66C;
+  margin-right: 20px;
 }
 
