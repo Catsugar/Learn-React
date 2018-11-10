@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './Welcome.css';
 import NameCard from './components/NameCard';
 import DigitalClock from './components/DigitalClock';
 import CommentList from './components/CommentList';
@@ -82,5 +82,4 @@ class Welcome extends React.Component{
 		);
 	}
 }
-
 export default Welcome
