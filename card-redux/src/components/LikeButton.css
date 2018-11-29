@@ -1,0 +1,16 @@
+.button{
+	float: right; 
+	font: bold 14px "微软雅黑";
+}
+.button button{
+	width: 30px;
+	height: 20px;
+	background:url(zan.png) center no-repeat;
+	background-size:contain;
+	border-radius:2px;
+	border: none;
+}
+.button b{
+	color: red;
+	background: unset;
+}
