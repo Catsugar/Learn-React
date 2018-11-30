@@ -6,7 +6,11 @@ import CommentList from './components/CommentList';
 import CommentBox from './components/CommentBox';
 import ThemeContext from './ThemeContext';
 import ThemeBar from './components/ThemeBar';
-import TodoList from './components/TodoList';
+/*redux*/
+import Footer from './components/Footer'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
+
 const themes={
 	light:{
 		classnames:"red",
@@ -40,10 +44,7 @@ class Welcome extends React.Component{
       })
 	}	
 	render(){
-		const {comments}=this.state
-		const todoList =['白宇','朱一龙','赵云澜','沈巍'];
-		const isLogin=true;
-		const test=<h1>你到底是啥呀？</h1>
+		const {comments}=this.state;
 		return (
 		  <ThemeContext.Provider value={themes[this.state.theme]}>
 			<div className="App">
@@ -59,7 +60,11 @@ class Welcome extends React.Component{
 			                <CommentList  comments={comments} />
 			            </div>
 			            <div className="right">
-		                    <TodoList />
+			              <div className="todolist">
+		                    <AddTodo />
+						    <VisibleTodoList />
+						    <Footer />
+						  </div>
 		                </div>
 	                </div>
                 </div>
@@ -67,16 +72,6 @@ class Welcome extends React.Component{
                 <NameCard name={"沈巍"} job={"龙城大学教授"} number={123456789} ishuman={false} tags={["惊鸿一瞥","美人攻","偏执","心头血"]}/>
                 <NameCard name={"祝红"} job={"御姐"} number={123456789} ishuman={false} tags={["妈的死gay","御姐","蛇"]}/>
                 <NameCard name={"郭长城"} job={"小锅巴"} number={123456789} ishuman={false} tags={["胆小啊","灯芯","没事烧烧"]}/>
-                <div className="try">
-	              	{4+3}{[1,2,3]}{<p>你是笨蛋吗？</p>}
-		            {isLogin? <p>你已经登录了呀！</p>:<p>你还没有登录呢？</p>}
-		            {test}
-		            <ul>
-		                {todoList.map((item,index) =>
-	                      <li key={index}>{item}</li>
-		                )}
-		            </ul>
-		        </div>
             </div>
           </ThemeContext.Provider>
 		);
