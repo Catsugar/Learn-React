@@ -6,14 +6,23 @@
   background-color:#F60;
   width: 300px;
 }
+.list{
+	width: 100%;
+	padding: 0
+}
 
 
 .list li{
 	height: 30px;
-	width: 100%;
+	width: 90%;
 	background-color: rgba(255,255,255,0.4);
 	border-radius: 5px;
 	margin-bottom: 8px;
 	font: bold 14px/30px "微软雅黑";
 	text-indent: 5px;
+	word-wrap: break-word; 
+	word-break: normal;
+	overflow: auto;
+	padding: 0 5%;
+	list-style: none;
 }

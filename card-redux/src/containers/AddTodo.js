@@ -18,8 +18,10 @@ const AddTodo = ({ dispatch }) => {
         }}
       >
         <div>输入任务:</div> 
-        <div className="controlbox"><input ref={node => (input = node)} className="control" placeholder="请输入任务" /></div>
-        <button type="submit" className="btn">添加</button>
+        <div className="controlbox">
+          <input ref={node => (input = node)} className="control" placeholder="请输入任务" />
+          <button type="submit" >添加</button>
+        </div>
       </form>
     </div>
   )

@@ -43,7 +43,7 @@ class TodoList extends React.Component{
                   {this.state.events.map((item,index) =>
                           <li key={index} onClick={this.itemClick.bind(this,index)}>{item}</li>
                         )}
-		        </ul>	 
+		            </ul>	 
             </div>
 
         )
