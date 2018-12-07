@@ -12,7 +12,7 @@
 ***
 ### react-demo
 >一个ReactRouter练习
-## [预览地址](https://catsugar.github.io/card_redux)
+## [预览地址](https://catsugar.github.io/Learn-React/react-demo/)
 
 ***
 ## 一些记录
