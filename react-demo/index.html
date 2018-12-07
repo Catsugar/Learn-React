@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="./build/react.js"></script>
+    <script src="./build/react-dom.js"></script>
+    <script src="./build/browser.min.js"></script>
+    <script src="./build/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/react-router/3.2.0/ReactRouter.min.js"></script>
+    <link type="text/css" href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    var {
+      Router,
+      Route,
+      IndexRoute,
+      IndexLink,
+      Link,
+      hashHistory
+    }=ReactRouter;
+	var Libai = React.createClass({
+      render: function() {
+	    return (
+	      <div>
+	        <h3>将进酒 </h3>
+	        <hr/>
+		    <p>君不见，黄河之水天上来，奔流到海不复回。<br/>
+			君不见，高堂明镜悲白发，朝如青丝暮成雪。<br/>
+			人生得意须尽欢，莫使金樽空对月。<br/>
+			天生我材必有用，千金散尽还复来。<br/>
+			烹羊宰牛且为乐，会须一饮三百杯。<br/>
+			岑夫子，丹丘生，将进酒，杯莫停。<br/>
+			与君歌一曲，请君为我倾耳听。(倾耳听 一作：侧耳听)<br/>
+			钟鼓馔玉不足贵，但愿长醉不复醒。(不足贵 一作：何足贵；不复醒 一作：不愿醒/不用醒)<br/>
+			古来圣贤皆寂寞，惟有饮者留其名。(古来 一作：自古；惟 通：唯)<br/>
+			陈王昔时宴平乐，斗酒十千恣欢谑。<br/>
+			主人何为言少钱，径须沽取对君酌。<br/>
+			五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。 </p>
+	      </div>
+	    );
+	  }
+	});
+    var Dufu = React.createClass({
+      render: function() {
+	    return (
+	      <div>
+	        <h3>茅屋为秋风所破歌 </h3>
+	        <hr/>
+	        <p>八月秋高风怒号，卷我屋上三重茅。<br/>
+	        茅飞渡江洒江郊，高者挂罥长林梢，下者飘转沉塘坳。<br/>
+			南村群童欺我老无力，忍能对面为盗贼，公然抱茅入竹去。<br/>
+			唇焦口燥呼不得，归来倚杖自叹息。<br/>
+			俄顷风定云墨色，秋天漠漠向昏黑。<br/>
+			布衾多年冷似铁，娇儿恶卧踏里裂。<br/>
+			床头屋漏无干处，雨脚如麻未断绝。<br/>
+			自经丧乱少睡眠，长夜沾湿何由彻?<br/>
+			安得广厦千万间，大庇天下寒士俱欢颜，风雨不动安如山。<br/>
+			呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！(死亦足 一作：死意足） </p>
+	      </div>
+	    );
+	  }
+	});
+	var Sushi = React.createClass({
+      render: function() {
+	    return (
+	      <div>
+	        <h3>念奴娇·赤壁怀古</h3>
+	        <hr/>
+	        <p>大江东去，浪淘尽，千古风流人物。<br/>故垒西边，人道是，三国周郎赤壁。<br/>人生如梦，一尊还酹江月。(人生 一作：人间；尊 通：樽)
+乱石穿空，惊涛拍岸，卷起千堆雪。<br/>江山如画，一时多少豪杰。<br/>遥想公瑾当年，小乔初嫁了，雄姿英发。<br/>羽扇纶巾，谈笑间，樯橹灰飞烟灭。(樯橹 一作：强虏)<br/>故国神游，多情应笑我，早生华发。<br/></p>
+	      </div>
+	    );
+	  }
+	});
+	var App = React.createClass({
+	  render: function() {
+	    return (
+	      <div>
+	        <h1>唐诗宋词</h1>
+	        <header>
+	          <ul>
+	        	<li><IndexLink to="/" activeClassName="active" >李白</IndexLink></li>
+	        	<li><Link to="/dufu" activeClassName="active">杜甫</Link></li>
+	        	<li><Link to="/sushi" activeClassName="active">苏轼</Link></li>
+	          </ul>
+	        </header>
+	        <section className="content">
+               {this.props.children}
+	        </section>
+
+	      </div>
+	    );
+	  }
+	});
+	ReactDOM.render(
+	  <Router history={hashHistory}>
+	    <Route path="/" component={App}>
+		  	 <IndexRoute component={Libai}/>
+		  	 <Route path="dufu" component={Dufu}/>
+		  	 <Route path="sushi" component={Sushi}/>
+		</Route>
+	  </Router>,
+	  document.getElementById('root')
+	);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.todolist{
+	font: bold 16px "微软雅黑";
+    background-color:#66C;
+    width: 100%;
+    height: 100%;
+    padding:20px ;
+    text-align: left;
+}
+.todolist ul{
+	padding-right: 20px;
+
+
+}
+.todolist button{
+	float: right;
+	margin-bottom: 20px;
+}

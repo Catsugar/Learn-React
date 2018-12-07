@@ -1,0 +1,73 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.App {
+  margin: 0;
+  padding: 0;}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+.try {
+  background-color: #c00;
+  font: bold 14px "微软雅黑";
+  padding: 20px;
+  color: white;
+}
+.red,.blue{
+  font: bold 14px "微软雅黑";
+  padding:5px 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+.red{
+  background-color: #FCC;
+  color: #000;}
+.blue{
+  background-color: #005680;
+  color: white;}
+.section{
+  height: auto;
+  min-height:400px;
+  width: 100%;
+}
+.left{
+  float: left;
+  width: 340px;
+}
+.right{
+  float: right;
+  width: 340px;
+  background-color:#66C;
+  margin-right: 20px;
+}
+
+.todolist{
+  font: bold 16px "微软雅黑";
+    background-color:#66C;
+    width: 100%;
+    height: 100%;
+    padding:20px;
+    text-align: left;
+}
+ .todolist button{
+  width: 60px;
+  height: 25px;
+  font: bold 14px "微软雅黑";
+  border:none;
+  border-radius:5px;
+}
+.controlbox button {
+  float: right;
+}
+.controlbox{
+  margin-bottom: 20px;
+  height: 100px;
+}
